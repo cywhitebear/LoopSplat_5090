@@ -65,7 +65,7 @@ def viewpoint_localizer(viewpoint, gaussians, base_lr: float=1e-3):
         }
     )
     optimizer = torch.optim.Adam(opt_params)
-    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, "min", factor=0.98, patience=5, verbose=False)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, "min", factor=0.98, patience=5)
     
     loss_log = []
     opt_iterations = 100
